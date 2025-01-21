@@ -97,4 +97,13 @@ public class ActorServiceImpl implements ActorService {
 		}
 	}
 
+	@Override
+	public List<Actor> findByActorName(String actorName) {
+		List<Actor> actors = actorRepository.findByActorName(actorName);
+		if(actors.isEmpty()) {
+			return null;
+		}
+		return actors;
+	}
+
 }

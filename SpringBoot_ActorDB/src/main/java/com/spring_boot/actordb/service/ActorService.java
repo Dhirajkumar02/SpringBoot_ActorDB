@@ -15,5 +15,7 @@ public interface ActorService {
 	public Actor findActorById(int actorId);
 	
 	public Actor deleteActorById(int actorId);
+	
+	public List<Actor> findByActorName(String actorName);
 
 }
